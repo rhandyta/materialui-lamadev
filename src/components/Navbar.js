@@ -26,20 +26,20 @@ const Search = styled("div")(({ theme }) => ({
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
-    display: "none",
+    display: "flex",
     alignItems: "center",
     gap: "20px",
     [theme.breakpoints.up("sm")]: {
-        display: "flex",
+        display: "none",
     },
 }));
 
 const UserBox = styled(Box)(({ theme }) => ({
-    display: "flex",
+    display: "none",
     alignItems: "center",
     gap: "10px",
     [theme.breakpoints.up("sm")]: {
-        display: "none",
+        display: "flex",
     },
 }));
 

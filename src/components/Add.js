@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import {
     Avatar,
     Box,
+    Button,
+    ButtonGroup,
     Fab,
     Modal,
     Stack,
@@ -10,7 +12,14 @@ import {
     Tooltip,
     Typography,
 } from "@mui/material";
-import { Add as AddIcon, InsertEmoticon } from "@mui/icons-material/";
+import {
+    Add as AddIcon,
+    Image,
+    InsertEmoticon,
+    PersonAddAlt,
+    VideoCameraBack,
+    DateRange,
+} from "@mui/icons-material/";
 
 const StyledModal = styled(Modal)(({ theme }) => ({
     display: "flex",
@@ -52,7 +61,8 @@ function Add() {
                     height={280}
                     borderRadius={5}
                     p={2}
-                    bgcolor="white"
+                    bgcolor={"background.default"}
+                    color="text.primary"
                 >
                     <Typography variant="h6" color="grey" textAlign="center">
                         Create Post
@@ -72,15 +82,21 @@ function Add() {
                         id="article"
                         label="What do you mind?"
                         multiline
-                        maxRows={4}
+                        rows={4}
                         variant="standard"
                     />
                     <Stack direction="row" gap={1} mt={1} mb={1}>
                         <InsertEmoticon sx={{ color: "#ffc107" }} />
-                        <InsertEmoticon sx={{ color: "#ffc107" }} />
-                        <InsertEmoticon sx={{ color: "#ffc107" }} />
-                        <InsertEmoticon sx={{ color: "#ffc107" }} />
+                        <Image color="primary" />
+                        <VideoCameraBack color="success" />
+                        <PersonAddAlt color="info" />
                     </Stack>
+                    <ButtonGroup variant="contained" size="large" fullWidth>
+                        <Button>Post</Button>
+                        <Button sx={{ width: 100 }}>
+                            <DateRange />
+                        </Button>
+                    </ButtonGroup>
                 </Box>
             </StyledModal>
         </>
