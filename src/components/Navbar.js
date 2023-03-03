@@ -82,7 +82,7 @@ function Navbar() {
                         src=""
                         sx={{ width: "30px", height: "30px" }}
                         onClick={() => setAnchorEl(true)}
-                    />{" "}
+                    />
                     <Typography variant="span">John Doe</Typography>
                 </Icons>
                 <UserBox onClick={() => setAnchorEl(true)}>
